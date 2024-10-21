@@ -1,4 +1,5 @@
 .podaci{
 display: flex;
-flex: column;
+flex-direction: column;
+align-items: center;
 }
