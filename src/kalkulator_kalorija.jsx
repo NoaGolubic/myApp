@@ -36,7 +36,7 @@ dok je za prosječnu žensku osobu taj unos nešto manji, otprilike 1500cal.<br/
 Preporučeni dnevni unos kalorija omogučuje nam da održavamo svoju tjelesnu težinu.<br/>
 Ako želite povečati svoju tjelesnu težinu, na rezultat dodajte 300-500 kalorija,<br/>
 a ako želite smanjiti tjelesnu težinu pokušajte oduzeti 150 kalorija od svakog obroka<br/>
-i biti fizički aktivni.
+i biti fizički aktivni.<br/>
 </p>
 </div>
 <div className="podaci">
@@ -54,9 +54,9 @@ i biti fizički aktivni.
     if (provjera < 101 || provjera > 1) {
       event.target.value = dob() || ""; 
     }
-  }}/>
+  }} autofocus/>
         <label>Unesite spol:</label>
-        <input placeholder="M ili Z" type="text" value={spol()}  onInput={(event) => {
+        <input placeholder="M ili Z" type="text" onInput={(event) => {
     let provjera = event.target.value; 
     if (provjera ==="M" || provjera ==="Z") {
       setSpol(provjera);
@@ -98,7 +98,7 @@ i biti fizički aktivni.
         </div>
         <div className="rezultat">
         <label>Vaš preopručeni dnevni unos kalorija je:</label>
-        <input type="number" value={BMR()}/>
+        <input type="number" value={BMR()} readOnly/>
         </div>
         <button onClick={() => formula()}>Potvrdi</button>
         </>
